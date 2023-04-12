@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row header">
+        <div class="col-sm-1">
+            <img class="logo" src="assets/images/logo.png" alt="sdd">
+        </div>
+        <div class="col-sm-11">
+            <h1 class="">Placement Cell</h1>
+        </div>
+
+    </div>
+    <div class="row mainbar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="nav-link navbar-brand" routerLink="/mainpage" routerLinkActive="active">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-brand" routerLinkActive="active" aria-current="page"
+                                routerLink="Admin-Login">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-brand" routerLinkActive="active" routerLink="Officer-Login">Officer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-brand" routerLinkActive="active" routerLink="Student-login">Student</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-brand" href="#" tabindex="-1" aria-disabled="true">About-Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>
+

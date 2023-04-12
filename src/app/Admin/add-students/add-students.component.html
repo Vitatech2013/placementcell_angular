@@ -1,0 +1,140 @@
+<div class="main">
+    <mat-card>
+        <form [formGroup]="StdReg" (ngSubmit)="Reg()">
+            <h2>Student Registration Form</h2>
+            <div class="row">
+                <div class="personDetails mt-1">
+                    <h4>Personal Details:</h4>
+                    <div class="row mt-2">
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Student Name</mat-label>
+                                <input 
+                                 matInput
+                                 class="form-control" 
+                                formControlName="studentname"
+                                >
+                              </mat-form-field>  
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Phoneno</mat-label>
+                                <input
+                                 matInput
+                                 type="text" 
+                                 class="form-control" 
+                                 formControlName="mobile"
+                                >
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                                <mat-radio-group aria-label="Select an option" class="full-width-input"  formControlName="gender">
+                                <mat-label style="font-weight: 600;">Gender :</mat-label>
+                                <mat-radio-button value="Male">Male</mat-radio-button>
+                                <mat-radio-button value="Female">FeMale</mat-radio-button>
+                              </mat-radio-group>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Email-Id</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="Email-Id"
+                                 class="form-control" 
+                                 formControlName="emailid"
+                                >
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field appearance="outline" class="full-width-input">
+                                <mat-label>DOB</mat-label>
+                                <input matInput [matDatepicker]="picker"  formControlName="dob">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field> 
+                        </div>
+                        <div class="col-sm-4">
+
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Address</mat-label>
+                                <textarea rows="1" matInput  formControlName="address"></textarea>
+                              </mat-form-field>  
+                        </div>
+                    </div>
+                </div>
+                <div class="eDetails mt-1">
+                    <h4>Educational Details:</h4>
+                    <div class="row mt-2">
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>College Name</mat-label>
+                                <input 
+                                 matInput
+                                 class="form-control" 
+                                 formControlName="collegename"
+                                >
+                              </mat-form-field>  
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field appearance="outline" class="full-width-input">
+                                <mat-label>Qualification</mat-label>
+                                <mat-select  formControlName="education">
+                                  <mat-option value="B.Tech">B.Tech</mat-option>
+                                  <mat-option value="MBA">MBA</mat-option>
+                                  <mat-option value="MCA">MCA</mat-option>
+                                  <mat-option value="M-Tech">M-Tech</mat-option>
+                                  <mat-option value="BSC">BSC</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Branch</mat-label>
+                                <input 
+                                 matInput
+                                 class="form-control" 
+                                 formControlName="branch"
+                                >
+                              </mat-form-field>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <mat-form-field appearance="outline" class="full-width-input">
+                                <mat-label>Passing Year</mat-label>
+                                <input matInput [matDatepicker]="picker1"  formControlName="passyear">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                              </mat-form-field> 
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Technical Skills</mat-label>
+                                <input 
+                                 matInput
+                                 class="form-control" 
+                                 formControlName="skills"
+                                >
+                              </mat-form-field> 
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Extra Skills</mat-label>
+                                <input 
+                                 matInput
+                                 class="form-control" 
+                                 formControlName="extraskills"
+                                >
+                              </mat-form-field> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="text-center mb-4">
+                <button class="btn btn-success" [disabled]="this.StdReg.invalid">ADD Student</button>
+              </div>
+        </form>
+    </mat-card>
+</div>

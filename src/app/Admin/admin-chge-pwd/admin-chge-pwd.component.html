@@ -1,0 +1,46 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="changeForm" (ngSubmit)="change()">
+          <h2>Change-Password</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+             formControlName="username"
+            >
+          </mat-form-field>
+          
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+             matInput
+             type="password" 
+             class="form-control" 
+             formControlName="password"
+            >
+            <mat-error>
+              <small>Enter Old Password with min 3 & max-length 8 charecters </small>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>New Password</mat-label>
+            <input
+             matInput
+             type="password" 
+             class="form-control" 
+             formControlName="newpassword"
+            >
+            <mat-error>
+              <small>Enter new Password</small>
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="this.changeForm.invalid">ChangePassword</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+

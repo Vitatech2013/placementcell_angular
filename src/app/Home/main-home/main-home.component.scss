@@ -1,0 +1,33 @@
+.logo{
+    width: 100%;
+    height: 70px;
+    border-radius: 50px;
+    padding: 5px;
+}
+.header {
+    background-color:#2d3494;
+    color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    padding:20px;
+    .nav-link{
+        font-weight: bold;
+    }
+    .nav-link:hover{
+       color: blue;
+    }
+    .active{
+        color: blue;
+    }
+}
