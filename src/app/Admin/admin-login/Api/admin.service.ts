@@ -36,6 +36,15 @@ export class AdminService {
     return this.http.delete('http://localhost:4000/admin/officer/' + id)
   }
   ChngPwd(id:any,data:any){
-    return this.http.put('http://localhost:4000/admin/updatepassword' + id,data)
+    return this.http.put('http://localhost:4000/admin/updatepassword/' + id,data)
+  }
+  ViewApplyJobs(){
+    return this.http.get("http://localhost:4000/admin/applyjob")
+  }
+  ViewJobs(){
+    return this.http.get("http://localhost:4000/admin/job")
+  }
+  ViewCompany(){
+    return this.http.get("http://localhost:4000/admin/company")
   }
 }

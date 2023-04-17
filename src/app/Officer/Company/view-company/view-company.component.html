@@ -1,0 +1,38 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr  class="table-secondary">
+            <th scope="col">S.No</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">CompanyType</th>
+            <th scope="col">Phoneno</th>
+            <th scope="col">Emailid</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Branch</th>
+            <th scope="col">CompanyWebsite</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let F of ViewCompany index as i">
+            <th>{{i+1}}</th>
+            <td>{{F.CompanyName}}</td>
+            <td>{{F.CompanyType}}</td>
+            <td>{{F.Phoneno}}</td>
+            <td>{{F.Emailid}}</td>
+            <td>{{F.Address}}</td>
+            <td>{{F.City}}</td>
+            <td>{{F.State}}</td>
+            <td>{{F.Branch}}</td>
+            <td>{{F.CompanyWebsite}}</td>
+            <td>
+                <mat-icon color="primary" (click)="edit(F)">edit</mat-icon>&nbsp;
+                <mat-icon color="warn" (click)="DeleteCompany(F)">delete</mat-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+

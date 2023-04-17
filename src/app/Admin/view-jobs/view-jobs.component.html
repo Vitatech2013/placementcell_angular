@@ -1,8 +1,8 @@
 <div class="table-responsive">
-    <table class="table table-bordered table-hover mt-4">
+    <table class="table table-bordered table-hover mt-1">
         <thead class="thead-dark">
           <tr class="table-primary">
-            <th scope="col">S.No</th>
+            <th scope="col">J.No</th>
             <th scope="col">CompanyName</th>
             <th scope="col">Job Location</th>
             <th scope="col">JobRole</th>
@@ -13,21 +13,16 @@
           </tr>
         </thead>
         <tbody>
-          <!-- <tr *ngFor="let S of students index as i">
+          <tr *ngFor="let J of Jobs index as i">
             <th>{{i+1}}</th>
-            <td>{{S.studentname}}</td>
-            <td>{{S.mobile}}</td>
-            <td>{{S.gender}}</td>
-            <td>{{S.emailid}}</td>
-            <td>{{S.dob | date}}</td>
-            <td>{{S.address}}</td>
-            <td>{{S.collegename}}</td>
-            <td>{{S.education}}</td>
-            <td>{{S.branch}}</td>
-            <td>{{S.passyear}}</td>
-            <td>{{S.skills}}</td>
-            <td>{{S.extraskills}}</td>
-          </tr> -->
+            <td>{{J.CompanyName}}</td>
+            <td>{{J.JobLocation}}</td>
+            <td>{{J.JobRole}}</td>
+            <td>{{J.Qualification}}</td>
+            <td>{{J.JobCategory}}</td>
+            <td>{{J.RequiredSkills}}</td>
+            <td>{{J.ApplylastDate | date}}</td>
+          </tr>
         </tbody>
       </table>
     </div>

@@ -3,17 +3,17 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Admin-Module</mat-toolbar>
+    <mat-toolbar style="color:maroon">Admin-Module</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="Add-Officer">Add-Officers</a>
-      <a mat-list-item routerLink="Add-Students">Add-Students</a>
-      <a mat-list-item routerLink="View-Officers">View-Officers</a>
-      <a mat-list-item routerLink="View-Students">View-Students</a>
-      <a mat-list-item routerLink="View-Companys">View-Companys</a>
-      <a mat-list-item routerLink="View-Jobs">View-Jobs</a>
-      <a mat-list-item routerLink="View-ApplyJobs">View-ApplyJobs</a>
-      <a mat-list-item routerLink="ChangePassword">Change Password</a>
-      <a mat-list-item routerLink="/Home">Log Out</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Add-Officer">Add-Officers</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Add-Students">Add-Students</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Officers">View-Officers</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Students">View-Students</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Companys">View-Companys</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Jobs">View-Jobs</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-ApplyJobs">View-ApplyJobs</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="ChangePassword">Change Password</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="/Home">Log Out</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,7 +26,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>placementCell</span>
+      <span style="color: yellow;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PlacementCell</span>
     </mat-toolbar>
 <router-outlet></router-outlet>
   </mat-sidenav-content>

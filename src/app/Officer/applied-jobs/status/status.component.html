@@ -1,0 +1,57 @@
+
+<div class="main">
+    <form [formGroup]="Status" (ngSubmit)="Send()">
+        <div class="row">
+            <h2>Sending Status Report</h2>
+        </div>
+
+        <div class="row">
+        <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Name</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+            formControlName="name"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>CompanyName</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+            formControlName="companyname"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>JobCategory</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+            formControlName="jobcategory"
+            >
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width-input">
+            <mat-label>Status</mat-label>
+            <mat-select  formControlName="status">
+              <mat-option value="Pending">Pending</mat-option>
+              <mat-option value="Accepte">Accepted</mat-option>
+              <mat-option value="Reject">Reject</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Discription</mat-label>
+            <textarea matInput formControlName="remarks"></textarea>
+          </mat-form-field>
+        </div>
+        <div  class="text-center mb-4">
+          <button class="btn btn-success" [disabled]="this.Status.invalid">SendStatus</button>&nbsp;
+          <button class="btn btn-danger" mat-dialog-close>Cancel</button>
+        </div>
+
+    </form>
+
+</div>

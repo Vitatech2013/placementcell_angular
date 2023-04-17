@@ -23,13 +23,15 @@ export class OfficerLoginComponent implements OnInit{
   }
   Login(){
     let Email = this.OfficerloginForm.get('EmailId')?.value
-    let Password = this.OfficerloginForm.get('password')?.value
+    let Pwd = this.OfficerloginForm.get('Password')?.value
 
-      this.Api.getOfficer(Email,Password).subscribe((res:any)=>{
+      this.Api.getOfficer(Email,Pwd).subscribe((res:any)=>{
         this.Officer = res;
-        if(this.Officer){
+        console.log(res);
+        
+        if(res){
         localStorage.setItem('officer', JSON.stringify(res))
-          this.Routes.navigate(['/Officer-Home'])
+         this.Routes.navigate(['/Officer-Home'])
         }else{
           alert("Wrong Credentials")
         }

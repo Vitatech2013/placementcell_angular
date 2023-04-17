@@ -1,0 +1,35 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr  class="table-info">
+            <th scope="col">S.No</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">JobLocation</th>
+            <th scope="col">JobRole</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">JobCategory</th>
+            <th scope="col">RequiredSkills</th>
+            <th scope="col">ApplylastDate</th>
+            <th scope="col">ApplyJob</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let F of ViewJobs index as i">
+            <th>{{i+1}}</th>
+            <td>{{F.CompanyName}}</td>
+            <td>{{F.JobLocation}}</td>
+            <td>{{F.JobRole}}</td>
+            <td>{{F.Qualification}}</td>
+            <td>{{F.JobCategory}}</td>
+            <td>{{F.RequiredSkills}}</td>
+            <td>{{F.ApplylastDate | date}}</td>
+            <td>
+                <a (click)="edit(F)"><mat-icon color="accent">open_in_new</mat-icon></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+

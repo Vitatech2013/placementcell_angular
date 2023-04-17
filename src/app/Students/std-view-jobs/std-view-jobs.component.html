@@ -1,0 +1,46 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr  class="table-secondary">
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Email-Id</th>
+            <th scope="col">Mobileno</th>
+            <th scope="col">SSC</th>
+            <th scope="col">Inter</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">Jobcategory</th>
+            <th scope="col">RequiredSkills</th>
+            <th scope="col">Resume</th>
+            <th scope="col">status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let F of ViewAppliedJobs index as i">
+            <th>{{i+1}}</th>
+            <td>{{F.name}}</td>
+            <td>{{F.dob | date}}</td>
+            <td>{{F.emailid}}</td>
+            <td>{{F.phone}}</td>
+            <td>{{F.ssc}}</td>
+            <td>{{F.inter}}</td>
+            <td>{{F.qualification}}</td>
+            <td>{{F.companyname}}</td>
+            <td>{{F.jobcategory}}</td>
+            <td>{{F.requiredskills}}</td>
+            <td>
+                <mat-icon color="accent" (click)="Resume(F)">download</mat-icon>&nbsp;
+            </td>
+            <td>
+              <mat-icon color="primary" (click)="edit(F)">edit</mat-icon>
+              <mat-icon color="warn" (click)="DeleteJob(F)">delete</mat-icon>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+

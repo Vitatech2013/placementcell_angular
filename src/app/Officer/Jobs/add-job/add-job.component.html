@@ -1,0 +1,96 @@
+<div class="main">
+    <mat-card>
+    <h2>JOB-Form</h2>
+    <form [formGroup]="AddForm" (ngSubmit)="Add()">
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Company Name</mat-label>
+                    <mat-select  formControlName="CompanyName">
+                      <mat-option *ngFor="let C of companyList" value="{{C.CompanyName}}">{{C.CompanyName}}</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Job Location</mat-label>
+                    <mat-select  formControlName="JobLocation">
+                      <mat-option value="Karimnagar">Karimnagar</mat-option>
+                      <mat-option value="Hyderabad">Hyderabad</mat-option>
+                      <mat-option value="Warangal">Warangal</mat-option>
+                      <mat-option value="Hanmakonda">Hanmakonda</mat-option>
+                      <mat-option value="Nizambad">Nizambad</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Job Role</mat-label>
+                    <mat-select  formControlName="JobRole">
+                      <mat-option value="Angular Developer">Angular Developer</mat-option>
+                      <mat-option value="Flutter Developer">Flutter Developer</mat-option>
+                      <mat-option value="FullStack Developer">FullStack Developer</mat-option>
+                      <mat-option value="React Developer">React Developer</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Qualification</mat-label>
+                    <mat-select  formControlName="Qualification">
+                      <mat-option value="B.Tech">B.Tech</mat-option>
+                      <mat-option value="M.Tech">M.Tech</mat-option>
+                      <mat-option value="MCA">MCA</mat-option>
+                      <mat-option value="B.Sc.Computers">B.Sc.Computers</mat-option>
+                      <mat-option value="M.Sc.Computers">M.Sc.Computers</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Job Category</mat-label>
+                    <mat-select  formControlName="JobCategory">
+                      <mat-option value="Software">Software</mat-option>
+                      <mat-option value="Non-IT">Non-IT</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Required Skills</mat-label>
+                    <mat-select  formControlName="RequiredSkills">
+                      <mat-option value="Html,Css,Bootstrap">Html,Css,Bootstrap</mat-option>
+                      <mat-option value="Angular,Node.js,Mangodb,Express.js">Angular,Node.js,Mangodb,Express.js</mat-option>
+                      <mat-option value="Hanmakonda">React.js,Node.js,Express.js,Mongodb</mat-option>
+                      <mat-option value="Warangal">Flutter</mat-option>
+                      <mat-option value="Karimnagar">JavaScript</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>Apply Last Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="ApplylastDate">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker">
+                      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" [disabled]="this.AddForm.invalid">ADD JOBS</button>
+        </div>
+    </form>
+</mat-card>
+</div>

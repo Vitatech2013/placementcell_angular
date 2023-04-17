@@ -3,13 +3,13 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Student-Module</mat-toolbar>
+    <mat-toolbar  style="color:maroon">Student-Module</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Profile</a>
-      <a mat-list-item href="#">Companys</a>
-      <a mat-list-item href="#">Jobs</a>
-      <a mat-list-item href="#">Apply-Jobs</a>
-      <a mat-list-item href="#">Log Out</a>
+      <a mat-list-item  [routerLinkActive]="['is-active']" routerLink="Std-Profile">Profile</a>
+      <a mat-list-item  [routerLinkActive]="['is-active']" routerLink="Std-Company">Companys</a>
+      <a mat-list-item  [routerLinkActive]="['is-active']" routerLink="Std-Jobs">Jobs</a>
+      <a mat-list-item  [routerLinkActive]="['is-active']" routerLink="Std-ViewJob">Apply-Jobs</a>
+      <a mat-list-item  [routerLinkActive]="['is-active']" routerLink="/Home">Log Out</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,8 +22,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>placementCell</span>
+      <span style="color: yellow;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PlacementCell</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+<router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,0 +1,109 @@
+<div class="main">
+    <mat-card>
+    <h2>Company-Registration Form</h2>
+    <form [formGroup]="AddForm" (ngSubmit)="Add()">
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>CompanyName</mat-label>
+                    <input 
+                     matInput
+                     class="form-control" 
+                    formControlName="CompanyName"
+                    >
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Company Type</mat-label>
+                    <mat-select  formControlName="CompanyType">
+                      <mat-option value="MNC">MNC</mat-option>
+                      <mat-option value="IBM">IBM</mat-option>
+                      <mat-option value="IT">IT</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>Mobileno</mat-label>
+                    <input
+                     matInput
+                     type="text" 
+                     class="form-control" 
+                     formControlName="Phoneno"
+                    >
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>Email-Id</mat-label>
+                    <input 
+                     matInput
+                     placeholder="Email-Id"
+                     class="form-control" 
+                     formControlName="Emailid"
+                    >
+                  </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea rows="1" matInput  formControlName="Address"></textarea>
+                  </mat-form-field>  
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>City</mat-label>
+                    <mat-select  formControlName="City">
+                      <mat-option value="Hyderabad">Hyderabad</mat-option>
+                      <mat-option value="Nizambad">Nizambad</mat-option>
+                      <mat-option value="Hanmakonda">Hanmakonda</mat-option>
+                      <mat-option value="Warangal">Warangal</mat-option>
+                      <mat-option value="Karimnagar">Karimnagar</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>State</mat-label>
+                    <mat-select  formControlName="State">
+                      <mat-option value="Telangana">Telangana</mat-option>
+                      <mat-option value="A.P">A.P</mat-option>
+                      <mat-option value="Karnataka">Karnataka</mat-option>
+                      <mat-option value="Maharastra">Maharastra</mat-option>
+                      <mat-option value="Mumbai">Mumbai</mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>Branch</mat-label>
+                    <input 
+                     matInput
+                     class="form-control" 
+                    formControlName="Branch"
+                    >
+                  </mat-form-field>    
+            </div>
+            <div class="col-sm-4">
+                <mat-form-field class="full-width-input" appearance="outline">
+                    <mat-label>CompanyWebsite</mat-label>
+                    <input 
+                    type="url"
+                     matInput
+                     class="form-control" 
+                    formControlName="CompanyWebsite"
+                    >
+                  </mat-form-field> 
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" [disabled]="this.AddForm.invalid">ADD Company</button>
+        </div>
+    </form>
+</mat-card>
+</div>

@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table table-bordered table-hover mt-4">
+    <table class="table table-bordered table-hover mt-1">
         <thead class="thead-dark">
           <tr class="table-primary">
             <th scope="col">S.No</th>
@@ -12,25 +12,23 @@
             <th scope="col">Company Name</th>
             <th scope="col">JobCategory</th>
             <th scope="col">Required Skills</th>
-            <th scope="col">Resume</th>
+            <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>
-          <!-- <tr *ngFor="let S of students index as i">
+          <tr *ngFor="let S of students index as i">
             <th>{{i+1}}</th>
-            <td>{{S.studentname}}</td>
-            <td>{{S.mobile}}</td>
-            <td>{{S.gender}}</td>
+            <td>{{S.name}}</td>
             <td>{{S.emailid}}</td>
-            <td>{{S.dob | date}}</td>
-            <td>{{S.address}}</td>
-            <td>{{S.collegename}}</td>
-            <td>{{S.education}}</td>
-            <td>{{S.branch}}</td>
-            <td>{{S.passyear}}</td>
-            <td>{{S.skills}}</td>
-            <td>{{S.extraskills}}</td>
-          </tr> -->
+            <td>{{S.phone}}</td>
+            <td>{{S.ssc}}</td>
+            <td>{{S.inter}}</td>
+            <td>{{S.qualification}}</td>
+            <td>{{S.companyname}}</td>
+            <td>{{S.jobcategory}}</td>
+            <td>{{S.requiredskills}}</td>
+            <td>{{S.status}}</td>
+          </tr>
         </tbody>
       </table>
     </div>

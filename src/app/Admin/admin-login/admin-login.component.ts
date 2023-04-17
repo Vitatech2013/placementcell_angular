@@ -29,10 +29,10 @@ export class AdminLoginComponent implements OnInit{
 
     this.Api.getAdmin(UserName,Password).subscribe((res:any)=>{
       console.log(res,"check");
-      this.admin = res;
-      if(this.admin){
+      if(res){
         localStorage.setItem('admin', JSON.stringify(res))
-        this.Routes.navigate(['/Admin-Home'])
+         this.Routes.navigate(['/Admin-Home'])
+        alert("Success")
       }else{
         alert('Wrong Credentials')
       }
